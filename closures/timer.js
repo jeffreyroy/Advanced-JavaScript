@@ -6,4 +6,6 @@ window.onload = function() {
 
 };
 
-function timer(){/* implement here*/}
+function timer(){
+
+}
