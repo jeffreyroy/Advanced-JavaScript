@@ -1,5 +1,5 @@
 $(document).on('ready', function() {
-    
+
     // This function overwrites jQuery $, that why the button does not work
     // ====== DON'T DELETE / DON'T CHANGE ====
     $ = function () {
@@ -8,13 +8,14 @@ $(document).on('ready', function() {
     // ---------------------------------------
 
 
-    
+
     // Without changing this event handler, re-allocated it into
     // a different scope. See hints below if needed.
-    $('#catch-me').on('click',function(){
-        alert('jQ ing!')
-    });
-
+    (function($) {
+        $('#catch-me').on('click',function(){
+            alert('jQ ing!')
+        });
+    } ) (jQuery);
 });
 
 
@@ -29,7 +30,7 @@ $(document).on('ready', function() {
 
 
 
-    //Hint 1: Wrap the event handler in an IIFE to provide function scope that is 
+    //Hint 1: Wrap the event handler in an IIFE to provide function scope that is
     //separate from the global scope.
 
     // (function(){
@@ -44,4 +45,4 @@ $(document).on('ready', function() {
     // })(jQuery);
 
 
-    
+
