@@ -6,4 +6,15 @@ window.onload = function() {
 
 };
 
-function timer(){/* implement here*/}
+function timer(time, greeting){
+  var i = time
+    var countDown = setInterval(function() {
+      console.log(i);
+      i --;
+      if(i == 0) {
+        console.log(greeting);
+        clearInterval(countDown);
+      }
+    }, 1000);
+}
+
